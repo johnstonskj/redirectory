@@ -9,12 +9,14 @@ This depends on [Python](https://www.python.org/downloads/).
 In this case, simply provide either a full URL or a hostname (and HTTP will be assumed) on the command line.
 
     $ python redirect.py www.amazon.com
+    
+Note that you can also add "-p https" to set the default protocol to something other that "http://" when constructing URLs from simple host names.
   
 ## Input list example
 
 In this case simply prepare an input file that contains either a full URL or a hostname on each line.
 
-    $ python redirect.py -f listofurls.txt >results.csv
+    $ python redirect.py -i listofurls.txt -o results.csv
   
 ## Results format
 
@@ -28,4 +30,3 @@ The following is the format for each row of the response:
 * redirect-type - either "NO REDIRECT", "HTTP", "META" to denote how the page redirects
 * None - denotes that an error occured.
 
-    
